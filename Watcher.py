@@ -4,6 +4,10 @@ import logging
 import os
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+# from mozaiku import mozaiku
+# from gray import gray
+# from edge import edge
+
  
 #イベントハンドラ
 class ChangeHandler(FileSystemEventHandler):
@@ -14,6 +18,9 @@ class ChangeHandler(FileSystemEventHandler):
         filename = os.path.basename(filepath)
         print('%sを作成しました。' % filename)
         #ここで関数を呼び出す
+        # mozaiku()
+        # gray()
+        # edge()
  
     #ファイルやフォルダが更新された場合
     def on_modified(self, event):
@@ -36,15 +43,12 @@ class ChangeHandler(FileSystemEventHandler):
 
 def watcher():
     current_directory = os.path.dirname(os.path.abspath(__file__))
-    
+    print('実行中')
     event_handler = ChangeHandler()
     observer = Observer()
     observer.schedule(event_handler, current_directory, recursive=True)
 
     observer.start()
-    try:
-        while True:
-            time.sleep(1)
-    except KeyboardInterrupt:
-        observer.stop()
+    
+    observer.stop()
     observer.join()

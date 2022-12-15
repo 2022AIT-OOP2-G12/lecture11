@@ -9,6 +9,6 @@ def index():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    watcher()
     # debugモードが不要の場合は、debug=Trueを消してください
+    watcher()
     app.run(debug=True)
