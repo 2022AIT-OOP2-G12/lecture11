@@ -2,9 +2,9 @@ import pathlib
 import cv2
 import numpy as np
 
-input_dir = "input_dir"
-output_dir = "output_dir"
-input_list = list(pathlib.Path(input_dir).glob('**/*.jpg'))
+input_dir = "./static/input_dir"
+output_dir = "./static/output_dir/eg/"
+input_list = list(pathlib.Path(input_dir).glob('**/*.png'))
 
 for i in range(len(input_list)):
     img_file_name = str(input_list[i])
@@ -18,6 +18,6 @@ for i in range(len(input_list)):
                        180  
                       )
 
-    cv2.imwrite(f'./output_dir/{input_list[i].name}', canny_img)
+    cv2.imwrite(f'{output_dir}{input_list[i].name}', canny_img)
     
     
