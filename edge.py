@@ -18,7 +18,5 @@ def edge():
                       10, 
                       180  
                       )
-
-
-    cv2.imwrite(f'{output_dir}{input_list[i].name}', canny_img)    
+      cv2.imwrite(f'{output_dir}{input_list[i].name}', canny_img)    
     
