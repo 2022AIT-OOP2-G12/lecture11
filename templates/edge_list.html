@@ -2,11 +2,10 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-
-    <title>アップロードされた画像の一覧を表示</title>
+    <title>エッジ検出した画像の一覧を表示</title>
   </head>
   <body>
-    <h1>アップロードされた画像の一覧を表示</h1>
+    <h1>エッジ検出した画像の一覧を表示</h1>
     <ul>
       {% for image in images %}
       <li>
@@ -17,13 +16,12 @@
       {% endfor %}
     </ul>
     <!-- 画面遷移 -->
+    <!-- upload_list.htmlへ移動 -->
+    <a href="upload_list.html">アップロードされた画像の一覧を表示</a><br />
     <!-- mosaic_list.htmlへ移動 -->
     <a href="mosaic_list.html">モザイクに加工された画像の一覧を表示</a><br />
     <!-- grayscale_list.htmlへ移動 -->
-
     <a href="grayscale_list.html">グレースケール化された画像の一覧を表示</a
     ><br />
-    <!-- edge_list.htmlへ移動 -->
-    <a href="edge_list.html">エッジ検出した画像の一覧を表示</a><br />
   </body>
 </html>
