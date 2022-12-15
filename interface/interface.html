@@ -6,11 +6,12 @@
         <title>画像入力フォーム</title>
     </head>
     <body>
+        <h1>jpgまたはjpeg形式をアップロードしてください</h1>
         <form action="test.html" method="post" enctype="multipart/form-data" >
-        <input type="file" name="file" onchange="previewFile(this);">
+        <input type="file" accept=".jpeg, .jpg" name="file" onchange="previewFile(this);">
         <input type="submit" value="送信する">
     </form>
-    
+
     <p>プレビュー</p>
     <img id="preview">
     <script>
