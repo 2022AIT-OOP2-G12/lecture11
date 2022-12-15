@@ -13,8 +13,7 @@ class ChangeHandler(FileSystemEventHandler):
         filepath = event.src_path
         filename = os.path.basename(filepath)
         print('%sを作成しました。' % filename)
-        #ここで関数に引数としてfilenameを送る？
-        print(filename)
+        #ここで関数を呼び出す
  
     #ファイルやフォルダが更新された場合
     def on_modified(self, event):
