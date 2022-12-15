@@ -9,4 +9,4 @@ def index():
 
 if __name__ == "__main__":
     # debugモードが不要の場合は、debug=Trueを消してください
-    app.run()
+    app.run(debug=True)
