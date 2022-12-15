@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>モザイクに加工された画像の一覧を表示</title>
+  </head>
+  <body>
+    <h1>モザイクに加工された画像の一覧を表示</h1>
+    <ul>
+      {% for image in images %}
+      <li>
+        <a href="{{ image.url }}">
+          <img src="{{ image.url }}" alt="{{ image.name }}" />
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <!-- 画面遷移 -->
+
+    <!-- upload_list.htmlへ移動 -->
+    <a href="/upload_list.html">アップロードされた画像の一覧を表示</a>
+    <!-- grayscale_list.htmlへ移動 -->
+    <a href="/grayscale_list.html">グレースケール化された画像の一覧を表示</a>
+  </body>
+</html>
