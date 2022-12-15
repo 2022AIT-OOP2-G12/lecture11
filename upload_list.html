@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>アップロード画像一覧</title>
+  </head>
+  <body>
+    <h1>アップロード画像一覧</h1>
+    <ul>
+      {% for image in images %}
+      <li>
+        <a href="{{ image.url }}">
+          <img src="{{ image.url }}" alt="{{ image.name }}" />
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
